@@ -54,6 +54,10 @@ body {
     .explanation-greetings-text{
         font-size: 1rem;
     }
+    .explanation-greetings {
+        width: 70%;;
+        
+    }
 }
 @media (min-width: 480px) and (max-width: 768px) {
     .hello{
@@ -62,6 +66,10 @@ body {
     .explanation-greetings-text{
         font-size: 1.5rem;
     }
+    .explanation-greetings {
+        width: 60%;;
+        
+    }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
     .hello{
@@ -69,6 +77,10 @@ body {
     }
     .explanation-greetings-text{
         font-size: 2rem;
+    }
+    .explanation-greetings {
+        width: 50%;;
+        
     }
 }
 @media (min-width: 1024px) {
