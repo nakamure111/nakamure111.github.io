@@ -1,0 +1,17 @@
+html {
+font-size: 20px;
+}
+body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.form-question {
+    position: absolute;
+    bottom: 50%;
+}
+.que-btn {
+    position: absolute;
+    right: 50%;
+}
