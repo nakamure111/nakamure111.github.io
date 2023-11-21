@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
 .greetings {
@@ -16,6 +17,13 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-image: url(/file/image/background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.greetings::before{
+    background-color:rgba(0, 0, 0, .5);
 
 }
 .explanation-greetings {
@@ -24,7 +32,7 @@ body {
     
 }
 .explanation-greetings-text {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 
     transform: translate(0px, 120%);
     opacity: 0;
@@ -34,11 +42,11 @@ body {
 .explanation-greetings-text._active{
     transform: translate(0px, 0px);
     opacity: 1;
-
+    
 }
 .hello {
     font-size: 7rem;
-
+    
     transform: translate(0px, 120%);
     opacity: 0;
     transition: all 0.7s ease 0s;
@@ -46,6 +54,81 @@ body {
 .hello._active {
     transform: translate(0px, 0px);
     opacity: 1;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 1600px;
+    background-color: white;
+    padding-top: 120px;
+}
+.block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 200px;
+}
+.left{
+    flex-direction: row-reverse;
+}
+.question{
+    font-size: 3rem;
+}
+.answer{
+    font-size: 2rem;
+
+    transform: translate(120%, 0px);
+    opacity: 0;
+    transition: all 1s ease 0.3s;
+}
+.answer._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+.leftA{
+    transform: translate(-120%, 0px);
+
+}
+.answer-container{
+    display: flex;
+    flex-direction: row;
+    justify-items:flex-end;
+    align-items: center;
+    margin: 30px;
+
+}
+.answer-container-left{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-items:flex-end;
+    align-items: center;
+    margin: 30px;
+}
+img{
+    object-fit: contain;
+}
+.img{
+    transform: translate(120%, 0px);
+    opacity: 0;
+    transition: all 1s ease 0.1s;
+}
+.img._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+
+}
+.img-left{
+    transform: translate(-120%, 0px);
+    opacity: 0;
+    transition: all 1s ease 0.1s;
+}
+.img-left._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+
 }
 @media (max-width: 480px) {
     .hello{
@@ -57,6 +140,33 @@ body {
     .explanation-greetings {
         width: 70%;;
         
+    }
+    .greetings{
+        background-size: 300%;
+        background-position: 50% 60%;
+    }
+    .block{
+        flex-direction: column;
+        margin-bottom:0px;
+        }
+    .question{
+        margin: 5%;
+        text-align: center;
+    }
+    .answer{
+        margin: 5%;
+        text-align: justify;
+    }
+    .answer-container{
+        margin-top: 40px;
+        flex-direction: column-reverse;
+    }
+    .answer-container-left{
+        margin-top: 40px;
+        flex-direction: column-reverse;
+    }
+    .body{
+        width: 100%;
     }
 }
 @media (min-width: 480px) and (max-width: 768px) {
@@ -70,6 +180,10 @@ body {
         width: 60%;;
         
     }
+    .greetings{
+        background-size: auto;
+    }
+ 
 }
 @media (min-width: 768px) and (max-width: 1024px) {
     .hello{
@@ -83,12 +197,16 @@ body {
         
     }
 }
-@media (min-width: 1024px) {
-    .hello{
-    
+@media (min-width: 1024px) and (max-width: 1600px) {
+    .explanation-greetings{
+       width: 28%;
     }
-    .explanation-greetings-text{
-    
+
     
 }
+@media (min-width: 1600px) {
+    .explanation-greetings{
+        width: 28%;
+     }
+
 }
